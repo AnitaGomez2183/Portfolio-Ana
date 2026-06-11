@@ -1,0 +1,118 @@
+---
+import "../styles/global.css";
+import { TEXTS } from "../i18n/translations";
+
+interface Props {
+  title: string;
+}
+
+const { title } = Astro.props;
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="description" content="Ana Laura Gómez — UX/UI Designer Portfolio" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/png" href="/Ana_Perfil.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..700;1,9..144,300..700&family=Inter:opsz,wght@14..32,400..600&display=swap"
+      rel="stylesheet"
+    />
+    <title>{title}</title>
+  </head>
+  <body>
+    <slot />
+  </body>
+</html>
+
+<script define:vars={{ TEXTS }}>
+  const reveals = document.querySelectorAll(".reveal");
+  if (reveals.length) {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("is-visible");
+            observer.unobserve(entry.target);
+          }
+        });
+      },
+      { threshold: 0.12, rootMargin: "0px 0px -40px 0px" }
+    );
+    reveals.forEach((el) => observer.observe(el));
+  }
+
+  const hamburger = document.querySelector(".header__hamburger");
+  const mobileNav = document.querySelector(".mobile-nav");
+
+  function closeMenu() {
+    if (!hamburger || !mobileNav) return;
+    hamburger.classList.remove("is-open");
+    hamburger.setAttribute("aria-expanded", "false");
+    mobileNav.classList.remove("is-open");
+    mobileNav.setAttribute("aria-hidden", "true");
+  }
+
+  function openMenu() {
+    if (!hamburger || !mobileNav) return;
+    hamburger.classList.add("is-open");
+    hamburger.setAttribute("aria-expanded", "true");
+    mobileNav.classList.add("is-open");
+    mobileNav.setAttribute("aria-hidden", "false");
+  }
+
+  if (hamburger && mobileNav) {
+    hamburger.addEventListener("click", () => {
+      hamburger.classList.contains("is-open") ? closeMenu() : openMenu();
+    });
+    mobileNav.querySelectorAll("a").forEach((link) => {
+      link.addEventListener("click", closeMenu);
+    });
+    document.addEventListener("click", (e) => {
+      if (!hamburger.contains(e.target) && !mobileNav.contains(e.target)) closeMenu();
+    });
+  }
+
+  let currentLang = localStorage.getItem("lang") || "en";
+
+  function applyLang(lang) {
+    currentLang = lang;
+    localStorage.setItem("lang", lang);
+    document.documentElement.lang = lang;
+    document.title = TEXTS[lang]["page-title"];
+
+    const metaDesc = document.querySelector('meta[name="description"]');
+    if (metaDesc) metaDesc.setAttribute("content", TEXTS[lang]["meta-desc"]);
+
+    document.querySelectorAll("[data-i18n]").forEach((el) => {
+      const key = el.getAttribute("data-i18n");
+      if (TEXTS[lang][key] !== undefined) el.textContent = TEXTS[lang][key];
+    });
+
+    document.querySelectorAll("[data-i18n-html]").forEach((el) => {
+      const key = el.getAttribute("data-i18n-html");
+      if (TEXTS[lang][key] !== undefined) el.innerHTML = TEXTS[lang][key];
+    });
+
+    document.querySelectorAll(".lang-btn__opt").forEach((opt) => {
+      opt.classList.toggle("is-active", opt.getAttribute("data-lang") === lang);
+    });
+
+    const toggle = document.getElementById("lang-toggle");
+    if (toggle) toggle.setAttribute("aria-label", lang === "en" ? "Switch to Spanish" : "Cambiar a inglés");
+  }
+
+  const langToggle = document.getElementById("lang-toggle");
+  if (langToggle) {
+    langToggle.addEventListener("click", (e) => {
+      const opt = e.target.closest(".lang-btn__opt");
+      if (opt) applyLang(opt.getAttribute("data-lang"));
+    });
+  }
+
+  applyLang(currentLang);
+</script>

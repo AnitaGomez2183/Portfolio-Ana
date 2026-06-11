@@ -1,0 +1,10 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(cp \"/home/mauro/Imágenes/2026-06-10_11-45.png\" \"/home/mauro/Documentos/CODE/portfolio_ana/portrait.png\")"
+    ],
+    "additionalDirectories": [
+      "/home/mauro/Imágenes"
+    ]
+  }
+}

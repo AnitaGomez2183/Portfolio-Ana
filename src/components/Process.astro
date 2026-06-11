@@ -1,0 +1,27 @@
+---
+const steps = [
+  { num: "01", title: "Discovery", desc: "Immersive research to frame the right problem." },
+  { num: "02", title: "Define",    desc: "Synthesising insights into actionable strategy." },
+  { num: "03", title: "Design",    desc: "Rapid prototyping and high-fidelity UI." },
+  { num: "04", title: "Test",      desc: "Validating with real users, iterating fast." },
+  { num: "05", title: "Deliver",   desc: "Pixel-perfect handoff with full specs." },
+];
+---
+
+<section id="process" class="section section--border">
+  <div class="container">
+    <div class="process__title-area">
+      <h2 class="heading-lg reveal" data-i18n-html="process-title"><span class="accent">Methodical</span> Creativity</h2>
+    </div>
+
+    <div class="process__grid">
+      {steps.map((step, i) => (
+        <div class={`process__step reveal${i > 0 ? ` reveal--delay-${i}` : ""}`}>
+          <div class="process__num">{step.num}</div>
+          <h3 class="process__name" data-i18n={`step-${i + 1}-name`}>{step.title}</h3>
+          <p class="process__desc" data-i18n={`step-${i + 1}-desc`}>{step.desc}</p>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>

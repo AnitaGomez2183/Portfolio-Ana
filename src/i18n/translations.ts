@@ -1,0 +1,136 @@
+export const TEXTS: Record<string, Record<string, string>> = {
+  en: {
+    "page-title": "Ana Laura Gómez — UX/UI Designer",
+    "meta-desc":
+      "Ana Laura Gómez — UX/UI Designer crafting human-centered digital experiences.",
+    "nav-about": "About",
+    "nav-projects": "Projects",
+    "nav-process": "Process",
+    "nav-contact": "Contact",
+    "nav-cta": "Let's talk",
+    "mobile-toggle": "Toggle menu",
+    "hero-title":
+      'Designing <span class="accent">human&#8209;centered</span> digital experiences.',
+    "hero-subtitle":
+      "I'm Ana Laura Gómez, a Product Designer crafting intuitive ecosystems that bridge the gap between complex technology and everyday delight.",
+    "hero-cta": "Let's work together",
+    "hero-outline": "My Process",
+    "hero-badge": "Available for new projects",
+    "about-title":
+      'Empathy-driven design<br/>for <span class="accent">complex systems</span>',
+    "about-p1":
+      "Great design isn't just how things look — it's how they empower people to interact with the world. With over six years of experience across fintech, health-tech, and SaaS, I transform messy user frustrations into seamless digital journeys.",
+    "about-p2":
+      "My work lives at the intersection of behavioural psychology and pixel-perfect craft. I lead with research, iterate through prototyping, and ship with conviction.",
+    "skills-label": "Technical Arsenal",
+    "tag-1": "Figma",
+    "tag-2": "Design Systems",
+    "tag-3": "Prototyping",
+    "tag-4": "User Research",
+    "tag-5": "Accessibility",
+    "tag-6": "HTML / CSS",
+    "quote-text":
+      "\"Ana has a rare ability to simplify the chaotic into something profoundly beautiful and functional. She's the calmest force in any design sprint.\"",
+    "quote-author": "— Lead Product Manager, TechFlow",
+    "projects-label": "Selected Projects",
+    "projects-heading": 'Recent <span class="accent">work</span>',
+    "projects-intro":
+      "A curated selection of digital products where I led strategy and visual execution from discovery to launch.",
+    "project1-cat": "Brand Identity · UX Strategy",
+    "project2-cat": "UI Architecture · 40+ Components",
+    "featured-label": "Featured Case Study",
+    "featured-title": "Finch Mobile App",
+    "featured-body":
+      "A community-driven marketplace empowering local pet businesses. Designed for empathy, connection, and effortless local trade — from zero-to-one in eight months.",
+    "featured-cta": "View case study",
+    "process-title":
+      '<span class="accent">Methodical</span> Creativity',
+    "step-1-name": "Discovery",
+    "step-1-desc": "Immersive research to frame the right problem.",
+    "step-2-name": "Define",
+    "step-2-desc": "Synthesising insights into actionable strategy.",
+    "step-3-name": "Design",
+    "step-3-desc": "Rapid prototyping and high-fidelity UI.",
+    "step-4-name": "Test",
+    "step-4-desc": "Validating with real users, iterating fast.",
+    "step-5-name": "Deliver",
+    "step-5-desc": "Pixel-perfect handoff with full specs.",
+    "cta-title":
+      'Let\'s build something <span class="accent">remarkable</span> together.',
+    "cta-btn": "Let's talk",
+    "footer-copy": "All rights reserved.",
+    "footer-back": "Back to top",
+    "social-email": "Email",
+    "social-linkedin": "LinkedIn",
+    "social-behance": "Behance",
+    "social-github": "GitHub",
+    "social-portfolio": "Portfolio",
+  },
+  es: {
+    "page-title": "Ana Laura Gómez — Diseñadora UX/UI",
+    "meta-desc":
+      "Ana Laura Gómez — Diseñadora UX/UI creando experiencias digitales centradas en las personas.",
+    "nav-about": "Sobre mí",
+    "nav-projects": "Proyectos",
+    "nav-process": "Proceso",
+    "nav-contact": "Contacto",
+    "nav-cta": "Hablemos",
+    "mobile-toggle": "Abrir menú",
+    "hero-title":
+      'Diseñando <span class="accent">experiencias digitales</span> centradas en las personas.',
+    "hero-subtitle":
+      "Soy Ana Laura Gómez, Diseñadora de Producto creando ecosistemas intuitivos que conectan tecnología compleja con el deleite cotidiano.",
+    "hero-cta": "Trabajemos juntos",
+    "hero-outline": "Mi Proceso",
+    "hero-badge": "Disponible para nuevos proyectos",
+    "about-title":
+      'Diseño empático<br/>para <span class="accent">sistemas complejos</span>',
+    "about-p1":
+      "El gran diseño no es solo cómo se ven las cosas — es cómo empoderan a las personas para interactuar con el mundo. Con más de seis años de experiencia en fintech, health-tech y SaaS, transformo frustraciones de usuarios en experiencias digitales fluidas.",
+    "about-p2":
+      "Mi trabajo vive en la intersección de la psicología del comportamiento y el oficio pixel a pixel. Lidero con investigación, itero a través de prototipos y entrego con convicción.",
+    "skills-label": "Arsenal Técnico",
+    "tag-1": "Figma",
+    "tag-2": "Sistemas de Diseño",
+    "tag-3": "Prototipado",
+    "tag-4": "Investigación UX",
+    "tag-5": "Accesibilidad",
+    "tag-6": "HTML / CSS",
+    "quote-text":
+      "\"Ana tiene una habilidad poco común para transformar el caos en algo profundamente bello y funcional. Es la fuerza más serena en cualquier sprint de diseño.\"",
+    "quote-author": "— Lead Product Manager, TechFlow",
+    "projects-label": "Proyectos Seleccionados",
+    "projects-heading": 'Trabajo <span class="accent">reciente</span>',
+    "projects-intro":
+      "Una selección curada de productos digitales donde lideré la estrategia y la ejecución visual desde el descubrimiento hasta el lanzamiento.",
+    "project1-cat": "Identidad de Marca · Estrategia UX",
+    "project2-cat": "Arquitectura UI · 40+ Componentes",
+    "featured-label": "Caso de Estudio Destacado",
+    "featured-title": "Finch Mobile App",
+    "featured-body":
+      "Un marketplace impulsado por la comunidad que empodera a los negocios locales de mascotas. Diseñado para la empatía, la conexión y el comercio local sin fricción — de cero a uno en ocho meses.",
+    "featured-cta": "Ver caso de estudio",
+    "process-title":
+      'Creatividad <span class="accent">Metódica</span>',
+    "step-1-name": "Descubrimiento",
+    "step-1-desc": "Investigación inmersiva para enmarcar el problema correcto.",
+    "step-2-name": "Definición",
+    "step-2-desc": "Sintetizando hallazgos en estrategia accionable.",
+    "step-3-name": "Diseño",
+    "step-3-desc": "Prototipado rápido y UI de alta fidelidad.",
+    "step-4-name": "Testeo",
+    "step-4-desc": "Validando con usuarios reales, iterando rápido.",
+    "step-5-name": "Entrega",
+    "step-5-desc": "Handoff pixel-perfect con especificaciones completas.",
+    "cta-title":
+      'Construyamos algo <span class="accent">extraordinario</span> juntos.',
+    "cta-btn": "Hablemos",
+    "footer-copy": "Todos los derechos reservados.",
+    "footer-back": "Volver al inicio",
+    "social-email": "Correo",
+    "social-linkedin": "LinkedIn",
+    "social-behance": "Behance",
+    "social-github": "GitHub",
+    "social-portfolio": "Portfolio",
+  },
+};

@@ -1,0 +1,59 @@
+---
+const tags = ["Figma", "Design Systems", "Prototyping", "User Research", "Accessibility", "HTML / CSS"];
+
+const pillColors = [
+  { bg: "rgba(163,230,53,0.2)",  text: "#5B7E00", border: "rgba(163,230,53,0.35)" },
+  { bg: "rgba(255,166,177,0.2)", text: "#C92A4A", border: "rgba(255,166,177,0.35)" },
+  { bg: "rgba(77,233,211,0.2)",  text: "#00806E", border: "rgba(77,233,211,0.35)" },
+  { bg: "rgba(180,150,220,0.25)",text: "#6A3EB1", border: "rgba(180,150,220,0.4)" },
+];
+---
+
+<section id="about" class="section section--border">
+  <div class="container about__grid">
+    <div class="reveal">
+      <h2 class="about__statement heading-lg" data-i18n-html="about-title">
+        Empathy-driven design<br/>for <span class="accent">complex systems</span>
+      </h2>
+      <div class="about__text body-md">
+        <p data-i18n="about-p1">
+          Great design isn't just how things look — it's how they empower people to interact
+          with the world. With over six years of experience across fintech, health-tech, and
+          SaaS, I transform messy user frustrations into seamless digital journeys.
+        </p>
+        <p data-i18n="about-p2">
+          My work lives at the intersection of behavioural psychology and pixel-perfect craft.
+          I lead with research, iterate through prototyping, and ship with conviction.
+        </p>
+      </div>
+    </div>
+
+    <aside class="about__sidebar reveal reveal--delay-1">
+      <div class="about__card">
+        <h3 class="about__card-title heading-sm" data-i18n="skills-label">Technical Arsenal</h3>
+        <div class="about__tags">
+          {tags.map((t, i) => {
+            const c = pillColors[Math.floor(Math.random() * pillColors.length)];
+            const tagKey = `tag-${i + 1}`;
+            return (
+              <span
+                class="pill"
+                style={`background:${c.bg};color:${c.text};border-color:${c.bg}`}
+                data-i18n={tagKey}
+              >
+                {t}
+              </span>
+            );
+          })}
+        </div>
+        <blockquote class="testimonial">
+          <p class="testimonial__text" data-i18n="quote-text">
+            "Ana has a rare ability to simplify the chaotic into something profoundly beautiful
+            and functional. She's the calmest force in any design sprint."
+          </p>
+          <footer class="testimonial__author" data-i18n="quote-author">— Lead Product Manager, TechFlow</footer>
+        </blockquote>
+      </div>
+    </aside>
+  </div>
+</section>

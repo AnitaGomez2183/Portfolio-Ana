@@ -1,0 +1,50 @@
+:root {
+  --cream: #F7F5F0;
+  --forest: #446900;
+  --forest-light: #557A00;
+  --peach: #F5D9C8;
+  --sage: #C5CF8B;
+  --sage-light: #DEE6C2;
+  --text: #1A1A1A;
+  --text-secondary: #5C5C5B;
+  --text-muted: #8B8A87;
+  --white: #FFFFFF;
+  --border: #E5E2DB;
+
+  --font-serif: 'Fraunces', 'Times New Roman', serif;
+  --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
+
+  --space-xs: 4px;
+  --space-sm: 8px;
+  --space-md: 16px;
+  --space-lg: 24px;
+  --space-xl: 32px;
+  --space-2xl: 48px;
+  --space-3xl: 64px;
+  --space-4xl: 96px;
+  --space-5xl: 128px;
+
+  --radius-sm: 8px;
+  --radius-md: 16px;
+  --radius-lg: 24px;
+  --radius-xl: 32px;
+  --radius-full: 9999px;
+
+  --shadow-sm: 0 2px 8px rgba(0, 0, 0, .04);
+  --shadow-md: 0 8px 24px rgba(0, 0, 0, .06);
+  --shadow-lg: 0 16px 48px rgba(0, 0, 0, .08);
+  --shadow-xl: 0 24px 64px rgba(0, 0, 0, .10);
+
+  --transition: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-slow: 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+
+  --content-max: 1200px;
+  --header-height: 72px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  :root {
+    --transition: 0s;
+    --transition-slow: 0s;
+  }
+}
