@@ -327,3 +327,34 @@ html[lang="es"] .social-link::after {
   align-items: center;
   gap: var(--space-md);
 }
+
+/* ── CERT BADGE ── */
+.cert-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: .75rem;
+  padding: .6rem 1rem;
+  margin-bottom: var(--space-lg);
+  border-radius: var(--radius-md);
+  border: 1px solid rgba(180,150,220,0.4);
+  background: rgba(180,150,220,0.1);
+  text-decoration: none;
+  transition: background .2s, border-color .2s;
+}
+.cert-badge:hover {
+  background: rgba(180,150,220,0.2);
+  border-color: rgba(180,150,220,0.6);
+}
+.cert-badge__flag { font-size: 1.4rem; line-height: 1; }
+.cert-badge__body { display: flex; flex-direction: column; gap: .1rem; }
+.cert-badge__level {
+  font-family: var(--font-sans);
+  font-weight: 700;
+  font-size: .9rem;
+  color: #6A3EB1;
+}
+.cert-badge__sub {
+  font-family: var(--font-sans);
+  font-size: .75rem;
+  color: var(--color-muted);
+}
